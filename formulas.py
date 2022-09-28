@@ -1,5 +1,32 @@
 # 1 - suma, resta, producto y división de 2 numeros con impresion de pantalla.
 
+def suma(a, b):
+    return print(f'La suma de ambos valores: {int(a + b)}')    
+def resta(a, b):
+    return print(f'La resta de ambos valores: {int(a - b)}')  
+def multiplicacion(a, b):
+    return print(f'La multiplicación de ambos valores: {int(a * b)}') 
+def division(a, b):
+    if (b != 0):
+        return print(f'La división de ambos valores: {a / b}')
+    else:
+        return print("No se puede dividir por cero")
+print('_____________________ Inicio del programa ejercicio 1 _____________________-')
+print("Ingrese 2 numeros enteros")
+a = float(input('Primer valor: '))
+while(a%1 != 0):
+    a = float(input('El valor debe ser ENTERO sin comas, Ingrese otro valor: '))
+
+b = float(input('Segundo valor: '))
+while(b % 1 != 0):
+    b = float(input('El valor debe ser ENTERO sin comas, Ingrese otro valor: '))
+
+print(f'los valores ingresados fueron: {int(a)} y {int(b)}')
+suma(a,b)
+resta(a,b)
+multiplicacion(a,b)
+division(a,b)
+
 # 2 - el mayor de 3 numeros enteros ingresados por el usuario. mostrar resultado y los 3 numeros por pantalla.
 
 # 3 - Cantidad a cobrar del cliente.  Validar ingreso del mes de acuerdo a un ingreso. 
