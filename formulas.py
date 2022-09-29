@@ -39,7 +39,6 @@ def saludo():
     for i in range(1,6):
         print("Hola")
 
-saludo()
 # 6 - escribir un numero y obtener los numeros pares menor a este.
 
 # 7 - Pedir un numero y devolver el mes. Validar ingreso.
@@ -49,11 +48,10 @@ def valores():
    acum=0
    prom=0
    cont=0
-   for i in range(1, 10):
+   for i in range(0,10):
         numero = int(input("ingrese numero: "))
         acum+=numero
         cont+=1
         prom=acum/cont
    return prom,acum
-valores()
 # 9 - Imprimir la suma de los números impares del 1 al 25.
