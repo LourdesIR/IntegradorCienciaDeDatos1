@@ -28,6 +28,20 @@ multiplicacion(a,b)
 division(a,b)
 
 # 2 - el mayor de 3 numeros enteros ingresados por el usuario. mostrar resultado y los 3 numeros por pantalla.
+def numero_max(numeros=[]):
+    _numeros = numeros
+    _puestos={0:'primer',1:'segundo',2:'tercer'}
+
+    while len(_numeros) < 3:
+        numero = int(input(f'Ingrese el {_puestos[len(_numeros)]} numero: '))
+        if numero in _numeros:
+            print('Ese número ya esta registrado.')
+            continue
+        _numeros.append(numero)
+    print(f'Numeros ingresados: {_numeros[0]}, {_numeros[1]}, {_numeros[2]}.')
+
+    resultado = f'De los numeros ingresados, {max(_numeros)} es el mayor.'
+    return resultado
 
 # 3 - Cantidad a cobrar del cliente.  Validar ingreso del mes de acuerdo a un ingreso. 
 # Discriminar en las impresiones de pantalla los valores referidos al total, descuento e importe a pagar final. 
@@ -37,6 +51,9 @@ division(a,b)
 # 5 - Programa que escriba hola 5 veces.
 
 # 6 - escribir un numero y obtener los numeros pares menor a este.
+def suma_pares(numero):
+    numeros_pares = [x for x in range(0,numero+1) if x % 2 == 0]
+    return f'La suma de todos los numeros pares anteriores a {numero} es: {sum(numeros_pares)}'
 
 # 7 - Pedir un numero y devolver el mes. Validar ingreso.
 
