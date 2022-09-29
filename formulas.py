@@ -33,6 +33,32 @@ division(a,b)
 # Discriminar en las impresiones de pantalla los valores referidos al total, descuento e importe a pagar final. 
 
 # 4 - Codigo de calificaciones docentes. validacion de notas.
+def calificando_alumnos():
+    _desaprobado = 'Ha desaprobado.'
+    _aprobado = 'Ha obtenido un aprobado.'
+    _calificacion_mayor = 'Ha obtenido una calificacion '
+
+    tabla_calificaciones ={
+                    1: _desaprobado,
+                    2: _desaprobado,
+                    3: _desaprobado,
+                    4: _aprobado,
+                    5: _aprobado,
+                    6: _aprobado,
+                    7: f'{_calificacion_mayor}notable.',
+                    8: f'{_calificacion_mayor}notable.',
+                    9: f'{_calificacion_mayor}sobresaliente.',
+                    10: f'{_calificacion_mayor}sobresaliente.',
+                    }
+    try: 
+        calificacion = int(input('Ingrese la calificacion del alumno: '))
+    except ValueError: 
+        return 'Se debe ingresar un numero entero.'
+        
+    if calificacion in tabla_calificaciones.keys():
+        return f'La calificación es {calificacion} {tabla_calificaciones[calificacion]}'
+    else: 
+        return 'Calificacion invalida.'
 
 # 5 - Programa que escriba hola 5 veces.
 
@@ -43,3 +69,6 @@ division(a,b)
 # 8 - Suma y promedio de 10 valores.
 
 # 9 - Imprimir la suma de los números impares del 1 al 25.
+def suma_impares_hasta_25():
+    numeros = [x for x in range(0,26) if x % 2 != 0]
+    return sum(numeros)
