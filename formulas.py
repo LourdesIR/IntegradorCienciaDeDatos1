@@ -75,6 +75,9 @@ def calificando_alumnos():
         return 'Calificacion invalida.'
 
 # 5 - Programa que escriba hola 5 veces.
+def saludo():
+    for i in range(1,6):
+        print("Hola")
 
 # 6 - escribir un numero y obtener los numeros pares menor a este.
 def suma_pares(numero):
@@ -84,7 +87,16 @@ def suma_pares(numero):
 # 7 - Pedir un numero y devolver el mes. Validar ingreso.
 
 # 8 - Suma y promedio de 10 valores.
-
+def valores():
+   acum=0
+   prom=0
+   cont=0
+   for i in range(0,10):
+        numero = int(input("ingrese numero: "))
+        acum+=numero
+        cont+=1
+        prom=acum/cont
+   return prom,acum
 # 9 - Imprimir la suma de los números impares del 1 al 25.
 def suma_impares_hasta_25():
     numeros = [x for x in range(0,26) if x % 2 != 0]
