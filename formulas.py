@@ -85,6 +85,14 @@ def suma_pares(numero):
     return f'La suma de todos los numeros pares anteriores a {numero} es: {sum(numeros_pares)}'
 
 # 7 - Pedir un numero y devolver el mes. Validar ingreso.
+def imprime_mes ():
+    meses_validos=('enero', 'febrero', 'marzo', 'abril','mayo', 'junio', 'julio', 'agosto', 'septiembre','octubre', 'noviembre','diciembre')
+
+    mes=int(input('Ingrese un número de mes (del 1 al 12): '))
+    if mes in range(1,13):
+        print(f'El mes seleccionado es {meses_validos[mes-1]}')
+    else: 
+        print('Debe ingresar números de 1 a 12')
 
 # 8 - Suma y promedio de 10 valores.
 def valores():
