@@ -16,7 +16,7 @@ Se usa invocandola y pasandole 2 paremetros de tipo entero, la misma devuelve la
 ```python
 ```
 ### 2 - numero_max()
-Pide 3 números enteros por teclado, comprueba que sean distintos y devuelve una lista con los numeros ordenados. Tambien se le puede pasar la lista de numeros por parametro.
+Pide 3 números enteros por teclado, comprueba que sean distintos y devuelve una cadena de texto explicando cual es el mayor. Tambien se le puede pasar la lista de numeros por parametro.
 ```python
 >>> numero_max()
 Ingrese el primer numero: 1
