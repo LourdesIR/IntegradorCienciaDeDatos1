@@ -61,6 +61,9 @@ La suma de todos los numeros pares anteriores a 150 es: 5700
 ### 7 - imprime_mes()
 Recibe un mes en formato numerico y devuelve el nombre del mismo.
 ```python
+>>> imprime_mes()
+Ingrese un número de mes (del 1 al 12): 5
+El mes seleccionado es mayo
 ```
 ### 8 - valores()
 Recibe 10 valores ingresados por teclado y devuelve el prmedio y la suma de los mismos.
