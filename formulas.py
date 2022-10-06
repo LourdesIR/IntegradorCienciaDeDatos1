@@ -1,31 +1,16 @@
+import datetime
+
 # 1 - suma, resta, producto y división de 2 numeros con impresion de pantalla.
+def funciones_primarias():
+    try: 
+        num1 = int(input('Ingrese el primer numero: '))
+        num2 = int(input('Ingrese el segundo numero: '))
+        division = 'No se puede dividir por cero' if num2 == 0 else f'la division es {num1/num2}'
 
-def suma(a, b):
-    return print(f'La suma de ambos valores: {int(a + b)}')    
-def resta(a, b):
-    return print(f'La resta de ambos valores: {int(a - b)}')  
-def multiplicacion(a, b):
-    return print(f'La multiplicación de ambos valores: {int(a * b)}') 
-def division(a, b):
-    if (b != 0):
-        return print(f'La división de ambos valores: {a / b}')
-    else:
-        return print("No se puede dividir por cero")
-print('_____________________ Inicio del programa ejercicio 1 _____________________-')
-print("Ingrese 2 numeros enteros")
-a = float(input('Primer valor: '))
-while(a%1 != 0):
-    a = float(input('El valor debe ser ENTERO sin comas, Ingrese otro valor: '))
+        return print(f'La suma es: {num1 + num2} \nLa resta es: {num1 - num2} \nLa multiplicacion es: {num1 * num2} \n{division}') 
+    except ValueError: 
+        return print('Los numeros ingresados deben ser enteros.')
 
-b = float(input('Segundo valor: '))
-while(b % 1 != 0):
-    b = float(input('El valor debe ser ENTERO sin comas, Ingrese otro valor: '))
-
-print(f'los valores ingresados fueron: {int(a)} y {int(b)}')
-suma(a,b)
-resta(a,b)
-multiplicacion(a,b)
-division(a,b)
 
 # 2 - el mayor de 3 numeros enteros ingresados por el usuario. mostrar resultado y los 3 numeros por pantalla.
 def numero_max(numeros=[]):
@@ -43,8 +28,23 @@ def numero_max(numeros=[]):
     resultado = f'De los numeros ingresados, {max(_numeros)} es el mayor.'
     return resultado
 
-# 3 - Cantidad a cobrar del cliente.  Validar ingreso del mes de acuerdo a un ingreso. 
-# Discriminar en las impresiones de pantalla los valores referidos al total, descuento e importe a pagar final. 
+# 3 - Cantidad a cobrar del cliente. Validar ingreso del mes de acuerdo a un ingreso, descuento octubre 15%.
+def importe_total_en_compra():
+    try:
+        mes = int(input('Ingrese el numero de mes de la compra: ')) 
+        while 1> mes or mes >12:
+            mes = int(input('El mes debe ser un numero entero del 1 al 12: ')) 
+        importe = float(input('Ingrese el importe de la compra: '))
+        
+        mes_descripcion = datetime.date(1900, mes, 1).strftime('%B')
+        porcentaje = 0.15 if mes == 10 else 0.0
+        importe_total = importe*(1-porcentaje) 
+        
+        mns = f'Importe Original: {importe} $ \nDescuento: {importe*-porcentaje} $ \nImporte Total: {importe_total} $'
+        
+        return f'Detalle de las compras del mes de {mes_descripcion}: \n{mns}'
+    except ValueError: 
+        return 'Se debe ingresar un numero entero.'
 
 # 4 - Codigo de calificaciones docentes. validacion de notas.
 def calificando_alumnos():
