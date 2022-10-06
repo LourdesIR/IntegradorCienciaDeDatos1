@@ -14,6 +14,13 @@ Cada función debe ser invocada como se indica en el titulo respectivo.
 ### 1 - operaciones(a,b)
 Se usa invocandola y pasandole 2 paremetros de tipo entero, la misma devuelve la suma, resta, el producto y el cociente entre ambos numeros.
 ```python
+>>> funciones_primarias()
+Ingrese el primer numero: 5
+Ingrese el segundo numero: 10
+La suma es: 15 
+La resta es: -5 
+La multiplicacion es: 50 
+la division es 0.5
 ```
 ### 2 - numero_max()
 Pide 3 números enteros por teclado, comprueba que sean distintos y devuelve una cadena de texto explicando cual es el mayor. Tambien se le puede pasar la lista de numeros por parametro.
@@ -34,6 +41,10 @@ Numeros ingresados: 1, 2, 3.
 ### 3 - simula_descuento()
 Una tienda ofrece un descuento del 15% sobre el total de la compra basado en el mes en transcurso. Dado un mes y un importe, calcula si corresponde aplicar un descuento y devuelve un ticket con toda la información solicitada.
 ```python
+>>> importe_total_en_compra()
+Ingrese el numero de mes de la compra: 10
+Ingrese el importe de la compra: 100
+'Detalle de las compras del mes de October: \nImporte Original: 100.0 $ \nDescuento: -15.0 $ \nImporte Total: 85.0 $'
 ```
 ### 4 - calificando_alumnos()
 Recibe una calificación y devuelve una cadena con información.
